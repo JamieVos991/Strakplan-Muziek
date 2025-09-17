@@ -1,0 +1,29 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+:root {
+    --witte-kleur: #e1dcd6;
+    --beige-kleur: #b19b9b;
+    --donkere-kleur: #393e46;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
+
+@font-face {
+  font-family: "Lostar";
+  src: url("../assets/fonts/lostar/Lostar.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

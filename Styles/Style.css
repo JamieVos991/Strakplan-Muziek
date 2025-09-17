@@ -1,0 +1,345 @@
+main {
+
+}
+
+section:nth-child(1) { /* Landings section */
+    background: #000000;
+    /* background: linear-gradient(45deg,rgba(0, 0, 0, 1) 68%, rgba(255, 255, 255, 1) 100%); */
+    height: 100vh;
+    display: flex;
+
+    ul {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        overflow: hidden;
+        padding: 60px 50px 0 50px;
+    }
+
+    li:nth-of-type(1) {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .ster-img {
+        width: 60px;  
+        position: absolute;
+        top: 15px;
+        left: 15px;
+    }
+
+    .vinyl-img {
+        width: 130%;
+        translate: 0 -40px;
+        display: block;
+        justify-self: center;
+        animation: draaien 10s linear infinite;
+        transform-origin: center; 
+    }
+
+    h1 {
+        font-size: 150px;
+        line-height: .8;
+        font-weight: 900;
+        font-family: "Bebas Neue", sans-serif;
+        text-transform: uppercase;
+        color: var(--witte-kleur);
+    }
+
+    h2 {
+        font-size: 80px;
+        font-family: "Lostar", sans-serif;
+        color: var(--beige-kleur);
+        transform: translateY(-70px);
+        letter-spacing: 3px;
+        font-style: italic  ;
+        font-weight: 100;
+    }
+
+    span {
+        font-size: 190px;
+    }
+
+    p {
+        color: var(--witte-kleur);
+        font-family: "Newsreader", serif;
+        font-size: 18px;
+        transform: translateY(-60px);
+    }
+
+    @media (min-width: 800px) {
+        img {
+            translate: 0 30%;
+        }
+    }
+
+    @media (min-width: 1000px) {
+        img {
+            width: 80%;
+            translate: 60% 0;
+            display: block;
+        }
+    }
+}
+
+section:nth-child(2) { /* Foto section */
+    background-image: url(../assets/images/IMG_7748.jpeg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding: 15px;
+
+    iframe {
+        height: 150px;
+    }
+}
+
+section:nth-child(3) { /* Shows section */
+    background: var( --donkere-kleur);
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    ul:nth-of-type(1) {
+        display: flex;
+    }
+
+    figure { /* Cirkel animatie van Amit Sheen */
+        width: 230px;
+        height: 230px;
+        border-radius: 50%;
+        animation: draaien 12s linear infinite;
+        transform-origin: center; 
+        position: relative;
+
+        span {
+            --rotate: calc(var(--i) * 20deg);
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            font-weight: bolder;
+            transform:
+              rotate(var(--rotate))
+              translateY(-90px)   
+              rotate(calc(var(--rotate) * 0)); 
+            color: white;
+            font-size: 1em;
+        }
+    }
+
+    figure:hover {
+        animation: draaien 4s linear infinite;
+    }
+
+    figure:nth-of-type(1) {
+        background-color: lightgray;
+    }
+
+    figure:nth-of-type(2) {
+        background-color: var(--beige-kleur);
+        position: absolute;
+        left: 140px;
+    }
+
+    ul:nth-of-type(2) {
+        h2 {
+            font-size: 300%;
+            color: white;
+        }
+    }
+
+    ul:nth-of-type(3) {
+        article {
+            width: 100%;
+            color: white;
+            padding: 0 30px;
+            position: relative;   
+            display: flex;
+            flex-direction: column;
+            gap: 35px; 
+
+            li:nth-of-type(1) {
+                right: 20px;
+                position: absolute;
+                top: 50px;
+
+                .show-tijd {
+                    font-size: 115%;
+                }
+            }
+
+            li:nth-of-type(2) {
+                display: flex;
+                text-transform: uppercase;
+                align-items: end;
+                gap: 15px;
+                padding-bottom: 35px;
+                border-bottom: 1px solid grey;
+            }
+
+            li:nth-of-type(3) {
+                padding-bottom: 70px;
+
+                .show-stad {
+                    font-size: 150%;
+                    font-weight: 100;
+                    text-transform: uppercase;
+                }
+            }
+
+            .show-dag {
+                font-size: 650%;
+                font-weight: bold;
+                Transform: translateY(25px);
+            }
+
+            .show-maand {
+                font-size: 120%;
+            }
+        }
+    }
+}
+
+section:nth-child(4) { /* Over ons title section */
+    background: var(--witte-kleur);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+
+    h2 {
+        font-size: 900%;
+        line-height: .8;
+        font-weight: 100;
+    }
+
+    h2:nth-of-type(2) {
+        font-family: "Lostar", sans-serif;
+    }
+}
+
+section:nth-child(5) { /* Over ons section */
+    background: var(--donkere-kleur);
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        height: 100%;
+        gap: 40px;
+    }
+
+    li {
+        p {
+            font-size: 25px;
+            text-transform: uppercase;
+            color: white;
+            font-weight: 100;
+        }
+
+        a {
+            color: white;
+            border: 1px solid white;
+            text-decoration: none;
+            padding: .5rem 2rem;
+            font-size: 13px;
+            border-radius: 20px;
+        }
+    }
+}
+
+section:nth-child(6) { /* Footer middle section */
+    background: rgba(0, 0, 0, 0.5);
+    height: 80vh;
+    display: flex;
+    z-index: 2;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    font-size: 250%;
+    overflow: hidden;
+    color: white;
+
+    ::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.15); 
+        z-index: -1;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        li:nth-of-type(2) {
+            display: flex;
+            gap: 40px;
+        }
+    }
+
+    a {
+        color: white;
+        font-size: 40%;
+        position: relative;
+        text-decoration: none;
+        font-weight: 100;
+    }
+
+    a::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 25px;
+        height: 1px;
+        background: white;
+    }
+
+    span {
+        font-weight: 100;
+    }
+
+    video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+        z-index: -1;
+    }
+}
+
+footer { /* Footer section */
+    background: var(--donkere-kleur);
+    height: 50vh;
+}
+
+@keyframes draaien {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
