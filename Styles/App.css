@@ -12,6 +12,10 @@ li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 :root {
     --witte-kleur: #e1dcd6;
     --beige-kleur: #b19b9b;

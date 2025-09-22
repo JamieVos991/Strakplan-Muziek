@@ -4,8 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Strak Plan Muziek</title>
-    <link rel="stylesheet" href="Styles/App.css" />
-    <link rel="stylesheet" href="Styles/Dashboard.css" />
+    <link rel="stylesheet" href="/Styles/App.css" />
+    <link rel="stylesheet" href="/Styles/Dashboard.css" />
   </head>
-  <body></body>
+  <body>
+    <main>
+      <section>
+        <ul>
+          <form id="show-form">
+            <input type="hidden" id="show-id" />
+            <input type="time" id="show-time" placeholder="Tijd" />
+            <input type="text" id="show-place" placeholder="Plek" required />
+            <input type="date" id="show-date" required />
+            <button type="submit">Voeg/Update Optreden</button>
+          </form>
+          <button onclick="logout()">Log uit</button>
+        </ul>
+
+        <ul>
+          <h2>Komende Optredens</h2>
+          <ul id="upcoming-shows"></ul>
+        </ul>
+
+        <ul>
+          <h2>Optredens die gebeurt zijn</h2>
+          <ul id="past-shows"></ul>
+        </ul>
+      </section>
+    </main>
+  </body>
+  <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore-compat.js"></script>
+  <script src="../Scripts/Firebase.Js"></script>
 </html>
